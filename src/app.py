@@ -92,7 +92,7 @@ def main():
             probability = model.predict_proba(input_df)
 
             # Display the result
-            st.subheader(f'Prediction Result ({model_choice})')
+            st.subheader(f'Prediction Result')
             if prediction[0] == 1:
                 st.warning('High risk of default')
                 st.write(f'Probability of default: {probability[0][1]:.2%}')
@@ -100,7 +100,7 @@ def main():
                 st.success('Low risk of default')
                 st.write(f'Probability of default: {probability[0][1]:.2%}')
         else:
-            st.error(f"Model {model_choice} not found. Please make sure the model file exists.")
+            st.error(f"Model not found. Please make sure the model file exists.")
 
 if __name__ == '__main__':
     main()
