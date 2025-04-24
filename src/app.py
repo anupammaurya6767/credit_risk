@@ -28,10 +28,10 @@ def main():
     models = load_models()
 
     # Model selection
-    model_choice = st.selectbox(
-        'Select Model',
-        ['Logistic Regression', 'Decision Tree', 'Random Forest']
-    )
+    # model_choice = st.selectbox(
+    #     'Select Model',
+    #     ['Logistic Regression', 'Decision Tree', 'Random Forest']
+    # )
 
     # Create input fields
     gender = st.selectbox('Gender', ['Female', 'Male'])
@@ -85,9 +85,9 @@ def main():
 
     # Add a prediction button
     if st.button('Predict Credit Risk'):
-        if model_choice in models:
+        if true:
             # Make prediction
-            model = models[model_choice]
+            model = models['Random Forest']
             prediction = model.predict(input_df)
             probability = model.predict_proba(input_df)
 
