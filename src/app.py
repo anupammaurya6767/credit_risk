@@ -85,7 +85,7 @@ def main():
 
     # Add a prediction button
     if st.button('Predict Credit Risk'):
-        if true:
+        if True:
             # Make prediction
             model = models['Random Forest']
             prediction = model.predict(input_df)
